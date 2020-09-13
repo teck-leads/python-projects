@@ -1,0 +1,50 @@
+from helloapp.models import Quotes
+quote1 = Quotes(quotestring="Only two things are infinite, the universe and human stupidity, and I'm not sure about the former.",quoteauthor='Albert Einstein')
+
+quote2 = Quotes(quoteauthor='Abraham Lincoln',quotestring="Give me six hours to chop down a tree and I will spend the first four sharpening the axe.")
+
+quote3 = Quotes(quoteauthor='Benjamin Franklin',quotestring="Tell me and I forget. Teach me and I remember. Involve me and I learn.")
+
+quote4 = Quotes(quoteauthor='Willian Shakespeare',quotestring="Listen to many, speak to a few.")
+
+quote5 = Quotes(quoteauthor='Warren Buffett',quotestring="Only when the tide goes out do you discover who's been swimming naked.")
+
+from helloapp import db
+
+db.session.add(quote1)
+db.session.add(quote2)
+db.session.add(quote3)
+db.session.add(quote4)
+db.session.add(quote5)
+
+db.session.commit()
+		
+Quotes.query.count()
+Quotes.query.filter(Quotes.quoteauthor == 'Benjamin Franklin').all()
+Quotes.query.filter(Quotes.quoteauthor == 'Benjamin Franklin').first()
+
+Quotes.query.all()
+Quotes.query.all()
+
+-----------------------
+we need to create table 
+
+flask db init
+flask db migrate -m "Creating quote table"
+flask db upgrade
+flask shell
+======================
+from helloapp.models import Quotes
+
+quote1 = Quotes(qstring="Tell me and I forget. Teach me and I remember. Involve me and I learn.", qauthor="Benjamin Franklin")
+quote2 = Quotes(qstring="Tell me and I forget. Teach me and I remember. Involve me and I learn.", qauthor="Benjamin Franklin")
+from helloapp import db
+
+db.session.add(quote1)
+db.session.add(quote2)
+db.session.commit()
+Quotes.query.all()
+==============testing
+ py.test helloapp/tests.py
+
+
