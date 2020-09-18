@@ -1,0 +1,5 @@
+flask==1.0.2    
+flask-testing==0.7.1
+pytest==3.2.1
+blinker==1.4.0
+werkzeug==0.16.0
