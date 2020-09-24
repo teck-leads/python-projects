@@ -1,0 +1,15 @@
+{% if showform == 'yes' %}
+ <form action="" method="POST">
+    <input type="text" name="username", required/>
+    <input type="password" name="password", required/>
+    <input type="submit" value="Login"/>
+</form>
+{% endif %}
+{% if notLoggedIn == 'yes' %}
+ <p id='b'>You are not logged in</p>
+<a href='/login'>click here to login</a>
+{% endif %}
+{% if notLoggedIn == 'no' %}
+ <p id='a'>Logged in as {{user}}</p>
+ <a href='/logout'>click here to logout</a>
+{% endif %}
