@@ -1,0 +1,60 @@
+only once at cmd
+py -m venv env
+
+one for each application
+env\Scripts\activate
+
+if any installing is required
+pip install flask
+
+
+set FLASK_APP=app.py
+#for live load the changes without restarting the server
+set  FLASK_DEBUG=1
+
+python test.py
+
+flask run
+
+python -m pip install --user --upgrade pip; pip3 install --user -r requirements.txt
+
+python.exe -m pip install --upgrade pip
+
+=========run script=============
+python.exe -m pip install --upgrade pip
+pip3 install  -r requirements.txt
+
+
+=========
+flask==1.0.2
+pip install -U Flask
+
+pytest==3.2.1
+pip install --upgrade pytest
+
+
+flask-testing==0.7.1
+pip install Flask-Testing
+
+blinker==1.4.0
+pip install blinker
+
+flask-sqlalchemy==2.3.2 
+pip install -U Flask-SQLAlchemy
+
+flask-migrate==2.2.1
+pip install Flask-Migrate
+
+werkzeug==0.16.0
+pip install Werkzeug
+pip install Flask-WTF
+pip install WTForms
+pip install requests
+python.exe -m pip install --upgrade pip
+==============Running this application============
+export FLASK_APP=api
+export FLASK_ENV=development
+flask run
+
+========Testing this application==========
+py.test tests/tests_routes.py
